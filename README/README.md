@@ -40,5 +40,5 @@ DTO:
 
 Создан глобальный обработчик ошибок ``HandlerException``, который перехватывает исключения и возвращает HTTP-ответ с кодом ``502 Bad Gateway`` и сообщением об ошибке.
 
-![img.png](img.png)
-![img_1.png](img_1.png)
+![img.png](../img.png)
+![img_1.png](../img_1.png)

@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 
 
-public class SinaraLearnProjectApp {
+public class SinaraLearnProjectAppTask4 {
     public static void main(String[] args) {
-        SpringApplication.run(SinaraLearnProjectApp.class, args);
+        SpringApplication.run(SinaraLearnProjectAppTask4.class, args);
     }
 }
 
