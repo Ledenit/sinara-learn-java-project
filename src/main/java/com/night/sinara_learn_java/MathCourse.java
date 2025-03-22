@@ -2,12 +2,15 @@ package com.night.sinara_learn_java;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Primary
 @Component
 public class MathCourse implements Course{
+    private static final Logger logger = LoggerFactory.getLogger(Syllabus.class);
 
     @Override
     public String getCourseName() {
@@ -26,11 +29,11 @@ public class MathCourse implements Course{
 
     @PostConstruct
     public void postConstruct() {
-        System.out.println("Bean MathCourse was created");
+        logger.info("Bean MathCourse was created");
     }
 
     @PreDestroy
     public void preDestroy() {
-        System.out.println("Bean MathCourse was destroyed");
+        logger.info("Bean MathCourse was destroyed");
     }
 }

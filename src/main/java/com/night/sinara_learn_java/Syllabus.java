@@ -1,5 +1,7 @@
 package com.night.sinara_learn_java;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -8,6 +10,7 @@ import org.springframework.stereotype.Component;
 public class Syllabus {
 
     private final Course constructorInjcourse;
+    private static final Logger logger = LoggerFactory.getLogger(Syllabus.class);
 
     @Autowired
     private Course fieldInjCourse;
@@ -24,8 +27,8 @@ public class Syllabus {
     }
 
     public void printCourses() {
-        System.out.println("Field Injection: " + fieldInjCourse.getCourseName());
-        System.out.println("Constructor Injection: " + constructorInjcourse.getCourseName());
-        System.out.println("Setter Injection: " + setterInjCourse.getCourseName());
+        logger.info("Field Injection: {}", fieldInjCourse.getCourseName());
+        logger.info("Constructor Injection: {}", constructorInjcourse.getCourseName());
+        logger.info("Setter Injection: {}", setterInjCourse.getCourseName());
     }
 }

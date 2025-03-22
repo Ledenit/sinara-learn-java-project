@@ -2,10 +2,13 @@ package com.night.sinara_learn_java;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component("EnglishCourse")
 public class EnglishCourse implements Course{
+    private static final Logger logger = LoggerFactory.getLogger(Syllabus.class);
 
     @Override
     public String getCourseName() {
@@ -24,11 +27,11 @@ public class EnglishCourse implements Course{
 
     @PostConstruct
     public void postConstruct() {
-        System.out.println("Bean EnglishCourse was created");
+        logger.info("Bean EnglishCourse was created");
     }
 
     @PreDestroy
     public void preDestroy() {
-        System.out.println("Bean EnglishCourse was destroyed");
+        logger.info("Bean EnglishCourse was destroyed");
     }
 }
