@@ -15,7 +15,7 @@ public class HeadersController {
     public String showHeaders(HttpServletRequest request, Model model) {
         List<String> headers = new ArrayList<>();
         Enumeration<String> headerNames = request.getHeaderNames();
-        while(headerNames.hasMoreElements()){
+        while (headerNames.hasMoreElements()) {
             String headerName = headerNames.nextElement();
             headers.add(headerName + ": " + request.getHeader(headerName));
         }

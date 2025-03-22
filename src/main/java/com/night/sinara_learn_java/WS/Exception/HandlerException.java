@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class HandlerException {
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> handleException(Exception exception){
+    public ResponseEntity<String> handleException(Exception exception) {
         return ResponseEntity.status(HttpStatus.BAD_GATEWAY)
                 .body("Произошла ошибка: " + exception.getMessage());
     }

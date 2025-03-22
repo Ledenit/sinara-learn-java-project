@@ -18,7 +18,7 @@ public class JsonController {
 
         InfoDateId infoDateId = new InfoDateId();
         infoDateId.setDate(request.getInfo().getDate());
-        infoDateId.setId(ThreadLocalRandom.current().nextInt(1000)); // генерация id
+        infoDateId.setId(ThreadLocalRandom.current().nextInt(1000));
 
         response.setInfo(infoDateId);
 
