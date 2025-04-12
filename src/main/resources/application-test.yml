@@ -1,0 +1,12 @@
+spring:
+  config:
+    activate:
+      on-profile: test
+app:
+  name: "learn-project-test"
+  values:
+    - "test0"
+    - "test1"
+    - "test2"
+    - "test3"
+  envVar: ${EXAMPLE_TEST:default}
