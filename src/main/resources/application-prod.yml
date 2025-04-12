@@ -1,0 +1,12 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+app:
+  name: "learn-project-prod"
+  values:
+    - "prod0"
+    - "prod1"
+    - "prod2"
+    - "prod3"
+  envVar: ${EXAMPLE_TEST:default}
